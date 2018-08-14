@@ -1,0 +1,139 @@
+body {
+	font-size: 14px;
+}
+
+a {
+	font-weight: bold;
+	color: $colour1;
+	
+	&:hover {
+		color: $colour3;
+	}
+}
+
+
+.noselect {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+.alignImageLeft {
+	float: left;
+	padding: 7px 25px 7px 0;
+}
+
+.alignImageRight {
+	float: right;
+	padding: 7px 0 7px 25px;
+}
+
+
+
+/************ BACKGROUNDS ************/
+.colour5 {
+	background-color: $colour5;
+}
+
+
+
+.colour2{
+	background-color: $colour2;
+}
+
+.light-grey {
+	background-color: $colour1;
+}
+
+
+.container{
+	padding: 0px;
+}
+
+
+h3, h4 {
+	font-weight: bold;
+}
+
+
+/************** COMMON STYLES*****************/
+#mainWrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+ul {
+	list-style-type: none;
+
+	li {
+		font-size: 14px;
+	}
+}
+
+
+
+p {
+	padding: 0 0 9px;
+	margin: 0;
+}
+
+.sectionTitle {
+	text-align: center;
+	padding: 20px 0;
+}
+
+
+
+@media (max-width: 768px) {
+
+	
+}
+
+
+
+
+.quote {
+	position: relative;
+	padding: 40px 0 10px 0;
+	font-size: 17px;
+	line-height:1.7;
+	margin: 25px 0 35px 75px;
+	border-bottom: 1px solid $colour5;
+
+	&:before {
+		content:"\201C";
+		position: absolute;
+		font-size: 80px;
+		color: $colour5;
+		font-weight: bold;
+		line-height: 75px;
+		top: 0;
+		left: -4px;
+		font-family: Arial;
+	}
+}
+
+
+
+@media (max-width: $mobileScreen) {
+	body {
+		overflow-x: hidden;
+	}
+}
+
+h5 {
+	text-align: center;
+	//text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.9;
+}

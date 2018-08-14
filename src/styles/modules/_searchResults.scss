@@ -1,0 +1,21 @@
+
+
+#search-results {
+	
+		
+	.result-item-wrap {
+		float: left;
+		width: 100%;
+		margin: 0 0 30px 0;
+		
+		.recipe-thumb {
+			max-width: 100%;
+		
+		}
+		
+		&:nth-child(even) {
+			background-color: $light-green;
+		}
+	}
+
+}

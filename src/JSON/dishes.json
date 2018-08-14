@@ -1,0 +1,21 @@
+[
+   {
+		"id": "1",
+		"name": "Pizza",
+		"type": "main",
+		"diet": "gluten-free",
+		"ingredients": "base, tomatos, olives, ham, mushrooms",
+		"summary": "Pizza on the GF base",
+		"img": "src/assets/img/0J5A6215.jpg"
+   },
+   
+   {
+		"id": "2",
+		"name": "village salad",
+		"type": "salad",
+		"diet": "vegan",
+		"ingredients": "lettuce, tomatos, cucumber, potatoes",
+		"summary": "Easy salad",
+		"img": "src/assets/img/0J5A3539.jpg"
+   }
+]

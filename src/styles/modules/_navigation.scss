@@ -1,0 +1,188 @@
+#navigation-module {
+	position: relative;
+	background-color: $colour2;
+
+	.topLevel {
+		margin-bottom: 0;
+		position: relative;
+		
+		> li {
+			color: $colour1;
+			letter-spacing: 1px;
+			display: inline-block;
+			font-size: 16px;
+			position: static;
+			text-align: center;
+			
+			&:hover {
+				background-color: $colour5;
+				cursor: pointer;
+			}
+			
+				&:focus {
+					outline: 0;
+				}
+			
+			
+			a {
+				color: #fff;
+				display: inline-block;
+				font-weight: normal;
+				text-transform: uppercase;
+				
+				&:hover {
+					text-decoration: none;
+				}
+				
+				&.navTitle {
+					padding: 20px 0;
+					position: relative;
+					/* z-index: 1000; */
+				}
+			}
+			
+			
+		}
+
+	}
+}
+
+
+@media (max-width: 767px) {
+	
+	#navigation-module {
+		position: absolute;
+		z-index: 200;
+		display: none;
+		width: 100%;
+	
+		.topLevel {
+			background-color: $colour1;
+			padding-left: 0;
+			padding-right: 0;
+		
+			>li {
+				position: relative;
+				width: 100%;
+				
+				.donateBtn {
+					margin: 0;
+					color: #fff;
+					margin: 20px 0;
+				}
+				
+				&.quickLink {
+					display: inline-block;
+					text-align: left;
+					border-bottom: 1px solid $colour1;
+					
+					a {
+						letter-spacing: 1px;
+						font-weight: bold;
+						font-size: 12px;
+						color: $colour5;
+						font-size: 15px;
+						padding: 20px 15px;
+					}
+				}
+				
+				.hoverWrap {
+					display: block;
+			
+					text-align: left;
+					border-bottom: 1px solid $colour1;
+					padding-left: 0;
+					padding-right: 0;
+					
+					a.navTitle {
+						width: 100%;
+						font-size: 16px;
+						padding: 20px 10px;
+						background: none;
+						
+						&:after {
+							position: relative;
+							top: 1px;
+							display: inline-block;
+							font-family: 'Glyphicons Halflings';
+							font-style: normal;
+							font-weight: normal;
+							line-height: 1;
+							-webkit-font-smoothing: antialiased;
+							content: "\e080";
+							padding-right: 10px;
+							color: $colour5;
+							float: right;
+						}
+						
+						&.staticLinkText {
+							&:after {
+								content: "";
+							}
+						}
+					}
+					
+					.secondLevelOutsideWrapper {
+						width: 100%;
+						background-color: $colour1;
+						left: 100%;
+						padding: 0;
+						display: block;
+						border: none;
+						
+						.secondLevelInsideWrapper {
+							border: none;
+							padding-bottom: 0;
+							
+							.secondLevel {
+								width: 100%;
+								padding: 0;
+								
+								li {
+									border-bottom: 1px solid $colour1;
+									
+									.navLink {
+										font-size: 15px;
+										width: 100%;
+										padding: 20px 10px;
+										height: auto;
+									}
+								}
+								
+								&:nth-of-type(2) {
+									
+									li:last-of-type {
+										border: none;
+									}
+								}
+							}
+						}
+					}
+					
+					&:hover {
+							
+						.navTitle{
+							border: none;
+							margin: 0;
+							
+							&:after {
+								content: "\e080";
+								position: relative;
+								top: 1px;
+								left: -17px;
+							}
+							
+							&:before, &:after {
+								border: none;
+							}
+						}
+						
+						.secondLevelOutsideWrapper {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
