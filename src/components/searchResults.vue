@@ -1,5 +1,4 @@
 
-// import func from './vue-temp/vue-editor-bridge';
 <template>
 	<div id="search-results">
 			
@@ -65,6 +64,12 @@
 
 	export default {
 		name: 'searchResults',
+
+		data: function () {
+			return {
+				rendered: false
+			}
+		},
 		
 		props: {
 			searchResponse: {
@@ -75,7 +80,17 @@
 
 		methods: {
 			goToDetailPage: function(itemID) {
-				console.log(itemID);
+				var self = this;
+				var xhttp = new XMLHttpRequest();
+				
+				xhttp.open("GET", "src/JSON/dish-id-" + itemID + ".json", true);
+				xhttp.send();
+				
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						self.$parent.dishDetailsObj = JSON.parse(this.responseText);
+				    }
+				};
 			}
 		}
 	}

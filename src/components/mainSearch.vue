@@ -25,7 +25,9 @@
 			
 		</div>
 		
-		<SearchResults v-bind:searchResponse="searchResponse" v-if="searchResponse.length"></SearchResults>
+		<SearchResults v-bind = "{searchResponse:searchResponse}" v-if = "showResultsMod"></SearchResults>
+
+		<DetailPage v-bind="{dishDetailsObj:dishDetailsObj}" v-if="showDetailMod"></DetailPage>
 		
 	</div>
 </template>
@@ -33,18 +35,23 @@
 <script>
 
 	import SearchResults from './searchResults.vue'
+	import DetailPage from './detailPage.vue'
 
 	export default {
 		name: 'MainSearch',
 		
 		components: {
-			SearchResults
+			SearchResults,
+			DetailPage
 		},
 		
 		data: function () {
 				return {
 					searchcriteria: "",
-					searchResponse: []
+					searchResponse: [],
+					dishDetailsObj: {},
+					showResultsMod: false,
+					showDetailMod: false
 				}
 		},
 
