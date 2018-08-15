@@ -4,7 +4,13 @@ const Bar = { template: '<div>bar</div>' }
 
 
 const routes = [
-	{ path: '/details', component: DetailPage },
+	{ 
+		path: '/details', 
+		name: "details",
+		component: DetailPage, 
+		props: true 
+	},
+
 	{ path: '/bar', component: Bar }
 ]
 	

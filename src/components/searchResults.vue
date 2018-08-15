@@ -1,4 +1,5 @@
 
+import func from './vue-temp/vue-editor-bridge';
 <template>
 	<div id="search-results">
 			
@@ -30,7 +31,8 @@
 							
 								<div class="recipe-summary-wrap">
 									<h3 class="recipe-title">
-										<a href="#" v-on:click.prevent="goToDetailPage(item.id)"> {{ item.name}} </a>
+										<a href="#" v-on:click.prevent="goToDetailPage(item.id)">  </a>
+										<router-link v-bind:to="{name: 'details', params: {itemID: item.id}}"> {{ item.name}} </router-link>
 									</h3>
 									
 									<div class="recipe-summary">
@@ -67,7 +69,7 @@
 
 		data: function () {
 			return {
-				rendered: false
+
 			}
 		},
 		
@@ -76,23 +78,8 @@
 				type: Array,
 				required: true
 			}
-		},
-
-		methods: {
-			goToDetailPage: function(itemID) {
-				var self = this;
-				var xhttp = new XMLHttpRequest();
-				
-				xhttp.open("GET", "src/JSON/dish-id-" + itemID + ".json", true);
-				xhttp.send();
-				
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						self.$parent.dishDetailsObj = JSON.parse(this.responseText);
-				    }
-				};
-			}
 		}
+
 	}
 
 </script>

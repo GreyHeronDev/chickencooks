@@ -15,6 +15,7 @@
 							<input type="text" name="main-search-field" id="main-search-field" v-model="searchcriteria" placeholder="ingredient, diet, name..."/>
 							
 							<button id="submitBtn" type="submit" class="btn" v-on:click.prevent="searchRecipes(searchcriteria)">Search</button>
+							
 						</div>
 						
 					</form>
@@ -24,10 +25,12 @@
 			</div>
 			
 		</div>
+
 		
 		<SearchResults v-bind = "{searchResponse:searchResponse}" v-if = "searchResponse.length"></SearchResults>
 
-		<DetailPage v-bind="{dishDetailsObj:dishDetailsObj}"></DetailPage>
+		<router-view></router-view>
+		<!-- <DetailPage v-bind="{dishDetailsObj:dishDetailsObj}"></DetailPage> -->
 		
 	</div>
 </template>
