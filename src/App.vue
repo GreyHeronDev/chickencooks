@@ -4,8 +4,9 @@
 	<div id="app">
 
 		<router-link to="/foo">Go to Foo</router-link>
-			<router-link to="/bar">Go to Bar</router-link>
-			<router-view></router-view>
+		<router-link to="/bar">Go to Bar</router-link>
+		<router-view></router-view>
+
 		<Header siteTitle="Курица Cooks!"/>
 		<Navigation v-bind:navItems="navItems" />
 		<MainSearch />

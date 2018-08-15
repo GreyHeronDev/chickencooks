@@ -1,10 +1,12 @@
 
-
-import Foo from '../components/Foo.vue'
+import DetailPage from '../components/detailPage.vue'
 const Bar = { template: '<div>bar</div>' }
 
 
 const routes = [
-	{ path: '/foo', component: Foo },
+	{ path: '/details', component: DetailPage },
 	{ path: '/bar', component: Bar }
-  ]
+]
+	
+
+export default routes

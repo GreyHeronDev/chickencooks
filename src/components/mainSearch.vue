@@ -25,9 +25,9 @@
 			
 		</div>
 		
-		<SearchResults v-bind = "{searchResponse:searchResponse}" v-if = "showResultsMod"></SearchResults>
+		<SearchResults v-bind = "{searchResponse:searchResponse}" v-if = "searchResponse.length"></SearchResults>
 
-		<DetailPage v-bind="{dishDetailsObj:dishDetailsObj}" v-if="showDetailMod"></DetailPage>
+		<DetailPage v-bind="{dishDetailsObj:dishDetailsObj}"></DetailPage>
 		
 	</div>
 </template>
@@ -49,9 +49,7 @@
 				return {
 					searchcriteria: "",
 					searchResponse: [],
-					dishDetailsObj: {},
-					showResultsMod: false,
-					showDetailMod: false
+					dishDetailsObj: {}
 				}
 		},
 
