@@ -29,9 +29,8 @@
 		
 		<SearchResults v-bind = "{searchResponse:searchResponse}" v-if = "searchResponse.length"></SearchResults>
 
-		<router-view></router-view>
 		<!-- <DetailPage v-bind="{dishDetailsObj:dishDetailsObj}"></DetailPage> -->
-		
+
 	</div>
 </template>
 

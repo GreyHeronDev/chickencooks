@@ -31,7 +31,6 @@ import func from './vue-temp/vue-editor-bridge';
 							
 								<div class="recipe-summary-wrap">
 									<h3 class="recipe-title">
-										<a href="#" v-on:click.prevent="goToDetailPage(item.id)">  </a>
 										<router-link v-bind:to="{name: 'details', params: {itemID: item.id}}"> {{ item.name}} </router-link>
 									</h3>
 									

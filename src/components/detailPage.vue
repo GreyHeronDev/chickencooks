@@ -49,14 +49,6 @@
 		created: function() {
 			this.goToDetailPage(this.$route.params.itemID);
 		},
-		
-		props: {
-
-			itemID: {
-				type: String,
-				required: true
-			}
-		},
 
 		watch: {
 			// call again the method if the route changes

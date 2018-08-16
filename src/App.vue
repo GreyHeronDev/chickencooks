@@ -3,13 +3,13 @@
 <template>
 	<div id="app">
 
-		<!-- <router-link to="/foo">Go to Foo</router-link>
-		<router-link to="/bar">Go to Bar</router-link> -->
-		<!-- <router-view></router-view> -->
-
 		<Header siteTitle="Курица Cooks!"/>
 		<Navigation v-bind:navItems="navItems" />
-		<MainSearch />
+
+		<router-view name="home"></router-view>
+		<router-view name="searchResults"></router-view>
+		<router-view name="details"></router-view>
+
 		<Footer />
 			
 	</div>

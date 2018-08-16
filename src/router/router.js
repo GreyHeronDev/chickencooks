@@ -1,17 +1,35 @@
 
+import MainSearch from '../components/mainSearch.vue'
 import DetailPage from '../components/detailPage.vue'
-const Bar = { template: '<div>bar</div>' }
+import SearchResults from '../components/searchResults.vue'
 
 
 const routes = [
+	{	
+		path: '/',
+		name: 'home',
+		components: {
+			home: MainSearch
+		}
+	},
+
+	{
+		path: '/search',
+		name: 'search-results',
+		components: {
+			home: MainSearch,
+			searchResults: SearchResults
+		}
+	},
+
 	{ 
 		path: '/details', 
 		name: "details",
-		component: DetailPage, 
+		components: {
+			details: DetailPage
+		},
 		props: true 
-	},
-
-	{ path: '/bar', component: Bar }
+	}
 ]
 	
 
