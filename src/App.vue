@@ -23,10 +23,7 @@
 
 	import Header from './components/header.vue'
 	import Navigation from './components/navigation.vue'
-	import MainSearch from './components/mainSearch.vue'
 	import Footer from './components/footer.vue'
-
-
 
 	export default {
 		name: 'app',
@@ -45,7 +42,6 @@
 		components: {
 			Header,
 			Navigation,
-			MainSearch,
 			Footer
 		}
 	}

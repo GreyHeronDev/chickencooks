@@ -30,16 +30,8 @@
 
 <script>
 
-	import SearchResults from './searchResults.vue'
-	import DetailPage from './detailPage.vue'
-
 	export default {
 		name: 'MainSearch',
-		
-		components: {
-			SearchResults,
-			DetailPage
-		},
 		
 		data: function () {
 				return {

@@ -4,14 +4,12 @@
 	
 	.ingredient-list {
 		li {
-			
+			list-style-type: disc;
 		}
 	}
 
 	.recipe-image {
-		img {
-			max-width: 100%;
-		}
+		max-width: 100%;
 	}
 	
 }

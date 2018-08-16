@@ -17,26 +17,31 @@
 			<div class="row">
 		
 				<div class="col-xs-12">
-					<div class="row">
-						<div class="recipe-wrap">
-
-							<h3 class="paragraph-title">Ingredients</h3>
-							
-							<ul class="ingredient-list col-xs-6">
-								<li class="col-xs-12" v-for="item in dishDetails.ingredients"> 
-									{{ item }}
-								</li> 
-							</ul>
-
-							<div class="recipe-image col-xs-6">
-								<img v-bind:src="dishDetails.img" alt="" />
-							</div>
-
-							<h3 class="paragraph-title">Method</h3>
-							<div class="recipe-text col-xs-12">
-								{{dishDetails.method}}
-							</div>
+					
+					<div class="recipe-wrap">
 						
+						<div class="row">
+							<div class=" col-xs-6">
+								<h3 class="paragraph-title">Ingredients</h3>
+								<ul class="ingredient-list">
+									<li v-for="(item, index) in dishDetails.ingredients" v-bind:key="index"> 
+										{{ item }}
+									</li> 
+								</ul>
+							</div>
+
+							<div class="col-xs-6">
+								<img class="recipe-image" v-bind:src="dishDetails.img" alt="" />
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<h3 class="paragraph-title">Method</h3>
+								<div class="recipe-text col-xs-12">
+									{{dishDetails.method}}
+								</div>
+							</div>
 						</div>
 
 					</div>
