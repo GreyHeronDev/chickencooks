@@ -4,8 +4,7 @@
 		"name": "Pizza",
 		"type": "main",
 		"diet": "gluten-free",
-		"ingredients": "base, tomatos, olives, ham, mushrooms",
+		"ingredients": ["base", "tomatoes", "olives", "ham", "mushrooms"],
 		"method": "всё порезать и положить на основу",
-		"summary": "Pizza on the GF base",
 		"img": "src/assets/img/0J5A6215.jpg"
    }   

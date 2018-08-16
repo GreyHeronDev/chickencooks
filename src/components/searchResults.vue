@@ -8,7 +8,7 @@ import func from './vue-temp/vue-editor-bridge';
 			<div class="row">
 				
 				<div class="col-xs-12">
-					<h3 class="sectionTitle">Search Results</h3>
+					<h2 class="sectionTitle">Search Results</h2>
 					
 				</div>
 				
@@ -68,15 +68,35 @@ import func from './vue-temp/vue-editor-bridge';
 
 		data: function () {
 			return {
-
+				searchResponse: []
 			}
 		},
-		
-		props: {
-			searchResponse: {
-				type: Array,
-				required: true
+
+		created: function() {
+			this.searchRecipes(this.$route.params.searchcriteria);
+		},
+
+		watch: {
+			// call again the method if the route changes
+			'$route': 'goToDetailPage'
+		},
+
+		methods: {
+			searchRecipes: function(data) {
+				
+				var self = this;
+				var xhttp = new XMLHttpRequest();
+				
+				xhttp.open("GET", "src/JSON/dishes.json", true);
+				xhttp.send();
+				
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						self.searchResponse = JSON.parse(this.responseText);
+				   }
+				};
 			}
+		
 		}
 
 	}

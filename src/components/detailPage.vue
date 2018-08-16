@@ -8,7 +8,7 @@
 			<div class="row">
 				
 				<div class="col-xs-12">
-					<h3 class="sectionTitle"> {{dishDetailsObj.name}} </h3>
+					<h2 class="sectionTitle"> {{dishDetails.name}} </h2>
 					
 				</div>
 				
@@ -17,11 +17,28 @@
 			<div class="row">
 		
 				<div class="col-xs-12">
-				
-					<div class="detail-item-wrap">
+					<div class="row">
+						<div class="recipe-wrap">
+
+							<h3 class="paragraph-title">Ingredients</h3>
+							
+							<ul class="ingredient-list col-xs-6">
+								<li class="col-xs-12" v-for="item in dishDetails.ingredients"> 
+									{{ item }}
+								</li> 
+							</ul>
+
+							<div class="recipe-image col-xs-6">
+								<img v-bind:src="dishDetails.img" alt="" />
+							</div>
+
+							<h3 class="paragraph-title">Method</h3>
+							<div class="recipe-text col-xs-12">
+								{{dishDetails.method}}
+							</div>
 						
-						
-					
+						</div>
+
 					</div>
 
 				</div>
@@ -42,7 +59,7 @@
 
 		data: function () {
 			return {
-				dishDetailsObj: {}
+				dishDetails: {}
 			}
 		},
 
@@ -65,7 +82,7 @@
 				
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
-						self.dishDetailsObj = JSON.parse(this.responseText);
+						self.dishDetails = JSON.parse(this.responseText);
 				    }
 				};
 			}
@@ -78,6 +95,6 @@
 
 <style lang="scss">
 
-	
+	@import "~stylesPath/_detailPage.scss";
 
 </style>

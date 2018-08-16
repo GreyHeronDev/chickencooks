@@ -14,8 +14,7 @@
 							<label for="main-search-field">Find a recipe</label>
 							<input type="text" name="main-search-field" id="main-search-field" v-model="searchcriteria" placeholder="ingredient, diet, name..."/>
 							
-							<button id="submitBtn" type="submit" class="btn" v-on:click.prevent="searchRecipes(searchcriteria)">Search</button>
-							
+							<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: searchcriteria}}" tag="button" class=" btn submitBtn"> Search </router-link>
 						</div>
 						
 					</form>
@@ -25,11 +24,6 @@
 			</div>
 			
 		</div>
-
-		
-		<SearchResults v-bind = "{searchResponse:searchResponse}" v-if = "searchResponse.length"></SearchResults>
-
-		<!-- <DetailPage v-bind="{dishDetailsObj:dishDetailsObj}"></DetailPage> -->
 
 	</div>
 </template>
@@ -49,28 +43,8 @@
 		
 		data: function () {
 				return {
-					searchcriteria: "",
-					searchResponse: [],
-					dishDetailsObj: {}
+					searchcriteria: ""
 				}
-		},
-
-		methods: {
-			searchRecipes: function(data) {
-				
-				var self = this;
-				var xhttp = new XMLHttpRequest();
-				
-				xhttp.open("GET", "src/JSON/dishes.json", true);
-				xhttp.send();
-				
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						self.searchResponse = JSON.parse(this.responseText);
-				   }
-				};
-			}
-		
 		}
 	}
 
