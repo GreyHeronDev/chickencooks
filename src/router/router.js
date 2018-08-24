@@ -25,6 +25,7 @@ const routes = [
 	{ 
 		path: '/details', 
 		name: "details",
+		append: "true",
 		components: {
 			details: DetailPage
 		},

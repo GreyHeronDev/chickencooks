@@ -31,7 +31,7 @@ import func from './vue-temp/vue-editor-bridge';
 							
 								<div class="recipe-summary-wrap">
 									<h3 class="recipe-title">
-										<router-link v-bind:to="{name: 'details', params: {itemID: item.id}}"> {{ item.name}} </router-link>
+										<router-link v-bind:to="{name: 'details', params: {itemID: item.id}, query: {recipe: item.name}}"> {{ item.name}} </router-link>
 									</h3>
 									
 									<div class="recipe-summary">
