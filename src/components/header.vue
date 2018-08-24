@@ -6,7 +6,9 @@
 			<div class="row">
 				
 				<div class="col-xs-12">
-					<h1 id="siteTitle">{{ siteTitle }}</h1>
+					<h1 id="siteTitle">
+						<router-link v-bind:to="{name: 'home'}">{{ siteTitle }}</router-link>
+					</h1>					
 				</div>
 			</div>
 		</div>

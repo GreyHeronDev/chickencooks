@@ -76,17 +76,17 @@ import func from './vue-temp/vue-editor-bridge';
 			this.searchRecipes(this.$route.params.searchcriteria);
 		},
 
-		watch: {
-			// call again the method if the route changes
-			'$route': 'goToDetailPage'
-		},
 
 		methods: {
-			searchRecipes: function(data) {
+			searchRecipes: function(searchData) {
 				
 				var self = this;
 				var xhttp = new XMLHttpRequest();
 				
+				// object to query
+				// https://stackoverflow.com/a/35416293
+				console.log(Object.keys(searchData).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(searchData[k])}`).join('&'));
+
 				xhttp.open("GET", "src/JSON/dishes.json", true);
 				xhttp.send();
 				
@@ -96,7 +96,6 @@ import func from './vue-temp/vue-editor-bridge';
 				   }
 				};
 			}
-		
 		}
 
 	}

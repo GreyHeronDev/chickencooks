@@ -14,7 +14,7 @@
 							<label for="main-search-field">Find a recipe</label>
 							<input type="text" name="main-search-field" id="main-search-field" v-model="searchcriteria" placeholder="ingredient, diet, name..."/>
 							
-							<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: searchcriteria}, query: {lookfor: searchcriteria}}" tag="button" class=" btn submitBtn"> Search </router-link>
+							<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: {lookfor: searchcriteria}}, query: {lookfor: searchcriteria}}" tag="button" class=" btn submitBtn"> Search </router-link>
 						</div>
 						
 					</form>
@@ -39,16 +39,29 @@
 				}
 		},
 
-		methods: {
-			
-		},
-
 		created: function () {
 			// set search value to the query string on navigating back (or server-side page load)
 			if ( this.$route.query.lookfor ) {
 				this.searchcriteria = this.$route.query.lookfor
 			}
+		},
+
+		watch: {
+			// call this method if the route changes
+			'$route': 'resetInput'
+		},
+
+
+		methods: {
+
+			// clear input if there is no relevant param in the url
+			resetInput: function() {
+				if ( !this.$route.query.lookfor ) {
+					this.searchcriteria = ""
+				}
+			}
 		}
+		
 	}
 
 </script>
