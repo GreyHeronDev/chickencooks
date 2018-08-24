@@ -14,7 +14,7 @@ import func from './vue-temp/vue-editor-bridge';
 				
 			</div>
 		
-			<div class="row">
+			<div class="row" v-if="searchResponse !== 0">
 		
 				<div class="col-xs-12">
 				
@@ -52,6 +52,10 @@ import func from './vue-temp/vue-editor-bridge';
 
 				</div>
 			
+			</div>
+
+			<div class="notFound" v-else>
+				No results found
 			</div>
 			
 		</div>
@@ -93,7 +97,9 @@ import func from './vue-temp/vue-editor-bridge';
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						self.searchResponse = JSON.parse(this.responseText);
-				   }
+				    } else {
+					   self.searchResponse = 0;
+				    }
 				};
 			}
 		}
