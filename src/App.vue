@@ -2,10 +2,16 @@
 
 <template>
 	<div id="app">
+
 		<Header siteTitle="Курица Cooks!"/>
 		<Navigation v-bind:navItems="navItems" />
-		<MainSearch />
+
+		<router-view name="home"></router-view>
+		<router-view name="searchResults"></router-view>
+		<router-view name="details"></router-view>
+
 		<Footer />
+			
 	</div>
 </template>
 
@@ -17,10 +23,7 @@
 
 	import Header from './components/header.vue'
 	import Navigation from './components/navigation.vue'
-	import MainSearch from './components/mainSearch.vue'
 	import Footer from './components/footer.vue'
-
-
 
 	export default {
 		name: 'app',
@@ -39,7 +42,6 @@
 		components: {
 			Header,
 			Navigation,
-			MainSearch,
 			Footer
 		}
 	}

@@ -1,5 +1,5 @@
 
-// import func from './vue-temp/vue-editor-bridge';
+import func from './vue-temp/vue-editor-bridge';
 <template>
 	<div id="search-results">
 			
@@ -8,7 +8,7 @@
 			<div class="row">
 				
 				<div class="col-xs-12">
-					<h3 class="sectionTitle">Search Results</h3>
+					<h2 class="sectionTitle">Search Results</h2>
 					
 				</div>
 				
@@ -31,7 +31,7 @@
 							
 								<div class="recipe-summary-wrap">
 									<h3 class="recipe-title">
-										<a href="#" v-on:click.prevent="goToDetailPage(item.id)"> {{ item.name}} </a>
+										<router-link v-bind:to="{name: 'details', params: {itemID: item.id}, query: {recipe: item.name}}"> {{ item.name}} </router-link>
 									</h3>
 									
 									<div class="recipe-summary">
@@ -65,19 +65,40 @@
 
 	export default {
 		name: 'searchResults',
-		
-		props: {
-			searchResponse: {
-				type: Array,
-				required: true
+
+		data: function () {
+			return {
+				searchResponse: []
 			}
 		},
 
+		created: function() {
+			this.searchRecipes(this.$route.params.searchcriteria);
+		},
+
+		watch: {
+			// call again the method if the route changes
+			'$route': 'goToDetailPage'
+		},
+
 		methods: {
-			goToDetailPage: function(itemID) {
-				console.log(itemID);
+			searchRecipes: function(data) {
+				
+				var self = this;
+				var xhttp = new XMLHttpRequest();
+				
+				xhttp.open("GET", "src/JSON/dishes.json", true);
+				xhttp.send();
+				
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						self.searchResponse = JSON.parse(this.responseText);
+				   }
+				};
 			}
+		
 		}
+
 	}
 
 </script>

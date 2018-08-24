@@ -14,7 +14,7 @@
 							<label for="main-search-field">Find a recipe</label>
 							<input type="text" name="main-search-field" id="main-search-field" v-model="searchcriteria" placeholder="ingredient, diet, name..."/>
 							
-							<button id="submitBtn" type="submit" class="btn" v-on:click.prevent="searchRecipes(searchcriteria)">Search</button>
+							<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: searchcriteria}, query: {lookfor: searchcriteria}}" tag="button" class=" btn submitBtn"> Search </router-link>
 						</div>
 						
 					</form>
@@ -24,46 +24,30 @@
 			</div>
 			
 		</div>
-		
-		<SearchResults v-bind:searchResponse="searchResponse" v-if="searchResponse.length"></SearchResults>
-		
+
 	</div>
 </template>
 
 <script>
 
-	import SearchResults from './searchResults.vue'
-
 	export default {
 		name: 'MainSearch',
 		
-		components: {
-			SearchResults
-		},
-		
 		data: function () {
 				return {
-					searchcriteria: "",
-					searchResponse: []
+					searchcriteria: ""
 				}
 		},
 
 		methods: {
-			searchRecipes: function(data) {
-				
-				var self = this;
-				var xhttp = new XMLHttpRequest();
-				
-				xhttp.open("GET", "src/JSON/dishes.json", true);
-				xhttp.send();
-				
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						self.searchResponse = JSON.parse(this.responseText);
-				   }
-				};
+			
+		},
+
+		created: function () {
+			// set search value to the query string on navigating back (or server-side page load)
+			if ( this.$route.query.lookfor ) {
+				this.searchcriteria = this.$route.query.lookfor
 			}
-		
 		}
 	}
 

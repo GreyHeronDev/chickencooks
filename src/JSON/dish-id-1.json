@@ -1,0 +1,12 @@
+
+   {
+		"id": "1",
+		"name": "Pizza",
+		"type": "main",
+		"diet": "gluten-free",
+		"ingredients": ["base", "tomatoes", "olives", "ham", "mushrooms"],
+		"method": "всё порезать и положить на основу",
+		"img": "src/assets/img/0J5A6215.jpg"
+   }   
+   
+   
