@@ -1,5 +1,4 @@
 
-import func from './vue-temp/vue-editor-bridge';
 <template>
 	<div id="search-results">
 			
@@ -14,7 +13,7 @@ import func from './vue-temp/vue-editor-bridge';
 				
 			</div>
 		
-			<div class="row">
+			<div class="row" v-if="searchResponse !== 0">
 		
 				<div class="col-xs-12">
 				
@@ -53,6 +52,10 @@ import func from './vue-temp/vue-editor-bridge';
 				</div>
 			
 			</div>
+
+			<div class="notFound" v-else>
+				No results found
+			</div>
 			
 		</div>
 		
@@ -76,27 +79,28 @@ import func from './vue-temp/vue-editor-bridge';
 			this.searchRecipes(this.$route.params.searchcriteria);
 		},
 
-		watch: {
-			// call again the method if the route changes
-			'$route': 'goToDetailPage'
-		},
 
 		methods: {
-			searchRecipes: function(data) {
+			searchRecipes: function(searchData) {
 				
 				var self = this;
 				var xhttp = new XMLHttpRequest();
 				
+				// object to query
+				// https://stackoverflow.com/a/35416293
+				console.log(Object.keys(searchData).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(searchData[k])}`).join('&'));
+
 				xhttp.open("GET", "src/JSON/dishes.json", true);
 				xhttp.send();
 				
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						self.searchResponse = JSON.parse(this.responseText);
-				   }
+				    } else {
+						self.searchResponse = 0;
+				    }
 				};
 			}
-		
 		}
 
 	}
