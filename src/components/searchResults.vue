@@ -1,5 +1,4 @@
 
-import func from './vue-temp/vue-editor-bridge';
 <template>
 	<div id="search-results">
 			
@@ -98,7 +97,7 @@ import func from './vue-temp/vue-editor-bridge';
 					if (this.readyState == 4 && this.status == 200) {
 						self.searchResponse = JSON.parse(this.responseText);
 				    } else {
-					   self.searchResponse = 0;
+						self.searchResponse = 0;
 				    }
 				};
 			}
