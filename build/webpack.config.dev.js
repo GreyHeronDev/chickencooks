@@ -21,6 +21,7 @@ module.exports = {
   
   
   resolve: {
+    extensions: ['.ts', '.vue', '.js'],
     alias: {
       stylesPath: path.resolve(__dirname, '../src/styles/modules/')
     }

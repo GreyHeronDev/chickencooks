@@ -6,6 +6,8 @@
 		<Header siteTitle="Курица Cooks!"/>
 		<Navigation v-bind:navItems="navItems" />
 
+		<TestSearch/>
+
 		<router-view name="home"></router-view>
 		<router-view name="searchResults"></router-view>
 		<router-view name="details"></router-view>
@@ -24,6 +26,9 @@
 	import Header from './components/header.vue'
 	import Navigation from './components/navigation.vue'
 	import Footer from './components/footer.vue'
+	
+	// Test
+	import TestSearch from './components/testSearch.vue'
 
 	export default {
 		name: 'app',
@@ -42,7 +47,8 @@
 		components: {
 			Header,
 			Navigation,
-			Footer
+			Footer,
+			TestSearch
 		}
 	}
 

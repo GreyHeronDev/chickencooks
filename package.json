@@ -13,6 +13,7 @@
   "dependencies": {
     "path": "^0.12.7",
     "vue": "^2.5.17",
+    "vue-innersearch": "0.0.12",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

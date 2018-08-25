@@ -1,10 +1,16 @@
 import Vue from 'vue'
-import App from './App.vue'
 import VueRouter from 'vue-router'
+import InnerSearch from 'vue-innersearch/src/innerSearch'
+
+// import components
+import App from './App.vue'
 
 Vue.config.productionTip = false;
 
+// Vue usages
 Vue.use(VueRouter);
+Vue.use(InnerSearch);
+
 import routes from './router/router.js'
   
   const router = new VueRouter({
