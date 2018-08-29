@@ -1,7 +1,7 @@
 
 /************ COLOURS ************/
 $colour1	:	#007F52;  // teal green
-$colour2    :   #88BFB0;  // teal
+$colour2    :   #96cebf;  // teal
 $colour3    :   #859F3C;  // grass green
 $colour4    :   #D7B983;  // sand
 $colour5    :   #45451F;  // swamp green
@@ -14,7 +14,16 @@ $light-green:	#daebdb;
 $primary	:	"Arial";
 $secondary	:	"Arial";
 
+@font-face { 
+    font-family: "Lobster"; 
+    src: url("src/styles/fonts/lobster.ttf") format("truetype"); 
+}
 
+
+@font-face { 
+    font-family: "Futura Round"; 
+    src: url("src/styles/fonts/futuraroundt.ttf") format("truetype"); 
+}
 
 /************* MOBILE *************/
 $mobileScreen	: 767px;

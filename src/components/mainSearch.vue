@@ -1,10 +1,10 @@
 
 <template>
-	<div id="search-block">
-		
-		<div id="search-module" data-module="recipeSearch">
+	
+		<div id="search-module">
+			<div class="transparent-overlay"></div>
 				
-			<div class="container">
+			<div class="row">
 			
 				<div class="col-xs-12">
 				
@@ -25,7 +25,6 @@
 			
 		</div>
 
-	</div>
 </template>
 
 <script>

@@ -3,7 +3,7 @@
 	
 	<div id="navigation-module">
 			
-		<div class="container">
+	
 			<div class="row">
 				<ul class="col-xs-12 topLevel">
 				
@@ -25,7 +25,7 @@
 
 				</ul>
 			</div>
-		</div>
+
 
 	</div>
 

@@ -1,19 +1,22 @@
 
 
 <template>
-	<div id="app">
 
-		<Header siteTitle="Курица Cooks!"/>
-		<Navigation v-bind:navItems="navItems" />
+	<div class="container">
+		<div id="app">
 
-		<TestSearch/>
+			<Header />
+			<Navigation v-bind:navItems="navItems" />
 
-		<router-view name="home"></router-view>
-		<router-view name="searchResults"></router-view>
-		<router-view name="details"></router-view>
+			<router-view name="home"></router-view>
+			<router-view name="searchResults"></router-view>
+			<router-view name="details"></router-view>
 
-		<Footer />
+			<Footer />
 			
+			<TestSearch/>
+				
+		</div>
 	</div>
 </template>
 

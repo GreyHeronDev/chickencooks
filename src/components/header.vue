@@ -2,16 +2,18 @@
 <template>
 	<div id="header-module">
 			
-		<div class="container">
 			<div class="row">
 				
 				<div class="col-xs-12">
 					<h1 id="siteTitle">
-						<router-link v-bind:to="{name: 'home'}">{{ siteTitle }}</router-link>
+						<router-link v-bind:to="{name: 'home'}">
+							<span class="script-font">Курица</span>
+							<span class="round-font">cooks!</span>
+						</router-link>
 					</h1>					
 				</div>
 			</div>
-		</div>
+
 
 	</div>
 </template>
@@ -26,7 +28,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 
 @import "../styles/modules/_header.scss";
 

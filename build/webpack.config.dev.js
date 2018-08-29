@@ -34,37 +34,37 @@ module.exports = {
         use: 'vue-loader'
       },
 	  
-	  {
-		  test: /\.css$/,
-		  use: [
-			'vue-style-loader',
-			'css-loader'
-		  ]
-	  },
-	  
-	  {
-		  test: /\.scss$/,
-             use: [{
-                loader: "style-loader" // creates style nodes from JS strings
-            }, {
-                loader: "css-loader", // translates CSS into CommonJS
-                options: {
-                  url: false
-                }
-            }, {
-                loader: "sass-loader", // compiles Sass to CSS, using Node Sass by default
-                options: {
-                  data: '@import "~stylesPath/_vars.scss";',
-                  sourceMap: true
-                }
+      {
+        test: /\.css$/,
+        use: [
+        'vue-style-loader',
+        'css-loader'
+        ]
+      },
+      
+      {
+        test: /\.scss$/,
+              use: [{
+                  loader: "style-loader" // creates style nodes from JS strings
+              }, {
+                  loader: "css-loader", // translates CSS into CommonJS
+                  options: {
+                    url: false
+                  }
+              }, {
+                  loader: "sass-loader", // compiles Sass to CSS, using Node Sass by default
+                  options: {
+                    data: '@import "~stylesPath/_vars.scss";',
+                    sourceMap: true
+                  }
 
-            }]
-	  },
-	  
-	  { 
-		test: /\.(png|woff|woff2|eot|ttf|svg|jpg|jpeg)$/, 
-		loader: 'url-loader?limit=100000' 
-	  }
+              }]
+      },
+      
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg|jpg|jpeg)$/, 
+        loader: 'url-loader?limit=100000' 
+      }
     ]
   },
   plugins: [
