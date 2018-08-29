@@ -1,0 +1,71 @@
+{
+    "id": "1",
+    "name": "Pizza",
+    "summary": "White Rabbit Glutten Free base Pizza",
+    "extra_equipment": "false",
+    "method": "respect the chicken making a pizza!",
+    "cooking_time":"30",
+    "image": "src/assets/img/0J5A6215.jpg",
+    "meal_types": "main",
+    "diets": ["gluten-free","other"],
+    "ingredients": [
+        {
+            "ingredient": "base",
+            "quantity": "1",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "tomatoes",
+            "quantity": "3",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "olives",
+            "quantity": "4",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "ham",
+            "quantity": "3",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "mushroom",
+            "quantity": "4",
+            "unit_measure": "piece"
+        }
+    ]
+},
+{
+    "id": "2",
+    "name": "Village Salad",
+    "summary": "Easy Salad",
+    "extra_equipment": "false",
+    "method": "respect the chicken making a salad!",
+    "cooking_time":"10",
+    "image": "src/assets/img/0J5A3539.jpg",
+    "meal_types": "salad",
+    "diets": "vegan",
+    "ingredients": [
+        {
+            "ingredient": "lettuce",
+            "quantity": "1",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "tomatoes",
+            "quantity": "2",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "cucumber",
+            "quantity": "0.5",
+            "unit_measure": "piece"
+        },
+        {
+            "ingredient": "potatoes",
+            "quantity": "180",
+            "unit_measure": "gr"
+        }
+    ]
+},

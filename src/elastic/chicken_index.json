@@ -1,0 +1,89 @@
+curl -X DELETE "localhost:9200/twitter"
+
+
+// Create the index and type
+
+PUT chicken
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 2,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "recipe": {
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "text",
+			  "fields": {
+			      "keyword": { 
+			          "type": "keyword"
+			      }
+			   }
+            },
+            "summary": {
+              "type": "text",
+			  "fields": {
+			      "keyword": { 
+			          "type": "keyword"
+			      }
+			   }
+            },
+            "extra_equipment": {
+              "type": "boolean"
+            },
+            "method": {
+              "type": "text",
+			  "fields": {
+			      "keyword": { 
+			          "type": "keyword"
+			      }
+			   }
+            },
+            "cooking_time": {
+              "type": "integer"
+            },
+            "image": {
+                "type":"text"
+            },
+            "entered_by": {
+              "type": "text"
+            },
+            "meal_types": {
+              "type": "text",
+			  "fields": {
+			      "keyword": { 
+			          "type": "keyword"
+			      }
+			   }
+            },
+            "diets": {
+              "type": "text",
+			  "fields": {
+			      "keyword": { 
+			          "type": "keyword"
+			      }
+			   }
+            },
+            "ingredients": {
+              "type": "nested",
+              "properties": {
+                "ingredient": {
+                  "type": "text"
+                },
+                "quantity": {
+                  "type": "text"
+                },
+                "unit_measure": {
+                  "type": "text"
+                }
+              }
+            }
+          }
+        }
+      }
+}
