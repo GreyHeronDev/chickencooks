@@ -47,19 +47,22 @@ module.exports = {
              use: [{
                 loader: "style-loader" // creates style nodes from JS strings
             }, {
-                loader: "css-loader" // translates CSS into CommonJS
+                loader: "css-loader", // translates CSS into CommonJS
+                options: {
+                  url: false
+                }
             }, {
                 loader: "sass-loader", // compiles Sass to CSS, using Node Sass by default
-				options: {
-					data: '@import "~stylesPath/_vars.scss";',
-					sourceMap: true
-				}
+                options: {
+                  data: '@import "~stylesPath/_vars.scss";',
+                  sourceMap: true
+                }
 
             }]
 	  },
 	  
 	  { 
-		test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+		test: /\.(png|woff|woff2|eot|ttf|svg|jpg|jpeg)$/, 
 		loader: 'url-loader?limit=100000' 
 	  }
     ]
