@@ -31,10 +31,11 @@
 				font-weight: normal;
 				text-transform: uppercase;
 				
-				&:hover {
+				&:hover, &:visited, &:focus {
 					text-decoration: none;
+					outline: none;
 				}
-				
+		
 				&.navTitle {
 					padding: 20px 0;
 					position: relative;
@@ -66,27 +67,6 @@
 				position: relative;
 				width: 100%;
 				
-				.donateBtn {
-					margin: 0;
-					color: #fff;
-					margin: 20px 0;
-				}
-				
-				&.quickLink {
-					display: inline-block;
-					text-align: left;
-					border-bottom: 1px solid $colour1;
-					
-					a {
-						letter-spacing: 1px;
-						font-weight: bold;
-						font-size: 12px;
-						color: $colour5;
-						font-size: 15px;
-						padding: 20px 15px;
-					}
-				}
-				
 				.hoverWrap {
 					display: block;
 			
@@ -115,49 +95,6 @@
 							color: $colour5;
 							float: right;
 						}
-						
-						&.staticLinkText {
-							&:after {
-								content: "";
-							}
-						}
-					}
-					
-					.secondLevelOutsideWrapper {
-						width: 100%;
-						background-color: $colour1;
-						left: 100%;
-						padding: 0;
-						display: block;
-						border: none;
-						
-						.secondLevelInsideWrapper {
-							border: none;
-							padding-bottom: 0;
-							
-							.secondLevel {
-								width: 100%;
-								padding: 0;
-								
-								li {
-									border-bottom: 1px solid $colour1;
-									
-									.navLink {
-										font-size: 15px;
-										width: 100%;
-										padding: 20px 10px;
-										height: auto;
-									}
-								}
-								
-								&:nth-of-type(2) {
-									
-									li:last-of-type {
-										border: none;
-									}
-								}
-							}
-						}
 					}
 					
 					&:hover {
@@ -177,10 +114,7 @@
 								border: none;
 							}
 						}
-						
-						.secondLevelOutsideWrapper {
-							display: block;
-						}
+
 					}
 				}
 			}
