@@ -5,17 +5,13 @@
 		
 	.result-item-wrap {
 		float: left;
-		width: 100%;
-		margin: 0 0 30px 0;
+		margin: 0 25px 30px 25px;
 		
 		.recipe-thumb {
 			max-width: 100%;
 		
 		}
-		
-		&:nth-child(even) {
-			background-color: $light-green;
-		}
+	
 	}
 
 }

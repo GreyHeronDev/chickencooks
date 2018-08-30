@@ -2,15 +2,8 @@
 <template>
 	<div id="search-results">
 		<div class="transparent-overlay"></div>
-		
-			<div class="row">
-				
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">Search Results</h2>
-					
-				</div>
-				
-			</div>
+
+			<SectionTitle v-bind:sectionTitle="sectionTitle" />
 		
 			<div class="row" v-if="searchResponse !== 0">
 		
@@ -65,12 +58,19 @@
 
 <script>
 
+	import SectionTitle from './sectionTitle.vue'
+
 	export default {
 		name: 'searchResults',
 
+		components: {
+			SectionTitle
+		},
+
 		data: function () {
 			return {
-				searchResponse: []
+				searchResponse: [],
+				sectionTitle: "Search Results"
 			}
 		},
 
@@ -81,7 +81,7 @@
 
 		methods: {
 			searchRecipes: function(searchData) {
-				
+				console.log(searchData);
 				var self = this;
 				var xhttp = new XMLHttpRequest();
 				

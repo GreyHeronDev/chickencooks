@@ -4,14 +4,7 @@
 	<div id="detail-page">
 			<div class="transparent-overlay"></div>
 		
-			<div class="row">
-				
-				<div class="col-xs-12">
-					<h2 class="sectionTitle"> {{dishDetails.name}} </h2>
-					
-				</div>
-				
-			</div>
+			<SectionTitle v-bind:sectionTitle=dishDetails.name />
 		
 			<div class="row">
 		
@@ -56,8 +49,14 @@
 
 <script>
 
+	import SectionTitle from './sectionTitle.vue'
+
 	export default {
 		name: 'DetailPage',
+
+		components: {
+			SectionTitle
+		},
 
 		data: function () {
 			return {
