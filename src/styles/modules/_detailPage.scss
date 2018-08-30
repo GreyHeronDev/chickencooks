@@ -1,15 +1,20 @@
 
 
 #detail-page {
-	
-	.ingredient-list {
-		li {
-			list-style-type: disc;
-		}
-	}
+	position: relative;
 
-	.recipe-image {
-		max-width: 100%;
-	}
+	.recipe-wrap {
+		padding: 0 25px;
+
+		.ingredient-list {
+			li {
+				list-style-type: disc;
+			}
+		}
+	
+		.recipe-image {
+			max-width: 100%;
+		}
+	}	
 	
 }

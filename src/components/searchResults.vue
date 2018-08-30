@@ -1,8 +1,7 @@
 
 <template>
 	<div id="search-results">
-			
-		<div class="container">
+		<div class="transparent-overlay"></div>
 		
 			<div class="row">
 				
@@ -53,12 +52,12 @@
 			
 			</div>
 
-			<div class="notFound" v-else>
-				No results found
+			<div class="row" v-else>
+				<div class="notFound" >
+					No results found
+				</div>
 			</div>
-			
-		</div>
-		
+
 	</div>
 	
 	

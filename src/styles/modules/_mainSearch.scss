@@ -2,54 +2,59 @@
 
 #search-module {
 	position: relative;
-
-	.transparent-overlay {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: #fff;
-		opacity: 0.9;
-	}
 	
 	.main-search-form {
-		padding: 50px 0;
+		padding: 50px 0 75px;
 		text-align: center;
 		
-		label {
-			display: block;
-			color: $colour3;
-			margin: 0 0 20px;
-			font-size: 15px;
-		}
-		
-		input {
-			padding: 10px;
-			border: none;
-			width: 350px;
-			color: #fff;
-			background-color: $colour3;
+		.inputCont {
+			label {
+				display: block;
+				color: $colour3;
+				margin: 0 0 20px;
+				font-size: 15px;
+			}
 
-			&:focus {
-				color: #fff;
+			.inner-input-cont {
+				overflow: hidden;
+				margin: auto;
+				display: inline-block;
+
+				input {
+					padding: 10px;
+					border: none;
+					width: 350px;
+					color: #fff;
+					background-color: $colour3;
+					float: left;
+		
+					&:focus {
+						color: #fff;
+					}
+					
+					&::placeholder {
+						color: #fff;
+					}
+		
+				}
+				
+				.submitBtn {
+					height: 40px;
+					width: 100px;
+					line-height: 40px;
+					padding: 0;
+					margin: 0 0 0 20px;
+					border: none;
+					background-color: $colour5;
+					color: #fff;
+					text-transform: uppercase;
+					float: left;
+				}
 			}
 			
-			&::placeholder {
-				color: #fff;
-			}
-
+			
 		}
-		
-		.submitBtn {
-			height: 40px;
-			width: 100px;
-			line-height: 40px;
-			padding: 0;
-			margin: 0 0 0 20px;
-			border: none;
-			background-color: $colour5;
-			color: #fff;
-			text-transform: uppercase;
-		}
+	
 		
 		&.error {
 			border: 1px solid red;

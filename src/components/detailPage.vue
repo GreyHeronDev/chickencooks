@@ -2,8 +2,7 @@
 
 <template>
 	<div id="detail-page">
-			
-		<div class="container">
+			<div class="transparent-overlay"></div>
 		
 			<div class="row">
 				
@@ -49,9 +48,7 @@
 				</div>
 			
 			</div>
-			
-		</div>
-		
+
 	</div>
 	
 	

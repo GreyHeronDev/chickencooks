@@ -12,9 +12,12 @@
 						
 						<div class="inputCont">
 							<label for="main-search-field">Find a recipe</label>
-							<input type="text" name="main-search-field" id="main-search-field" v-model="searchcriteria" placeholder="ingredient, diet, name..."/>
 							
-							<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: {lookfor: searchcriteria}}, query: {lookfor: searchcriteria}}" tag="button" class=" btn submitBtn"> Search </router-link>
+							<div class="inner-input-cont">
+								<input type="text" name="main-search-field" id="main-search-field" v-model="searchcriteria" placeholder="ingredient, diet, name..."/>
+								<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: {lookfor: searchcriteria}}, query: {lookfor: searchcriteria}}" tag="button" class=" btn submitBtn"> Search </router-link>
+							</div>
+
 						</div>
 						
 					</form>
