@@ -14,7 +14,7 @@
 
 			<Footer />
 			
-			<TestSearch/>
+			<RecipeSearch/>
 				
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 	import Footer from './components/footer.vue'
 	
 	// Test
-	import TestSearch from './components/testSearch.vue'
+	import RecipeSearch from './components/recipeSearch.vue'
 
 	export default {
 		name: 'app',
@@ -51,7 +51,7 @@
 			Header,
 			Navigation,
 			Footer,
-			TestSearch
+			RecipeSearch
 		}
 	}
 
