@@ -2,6 +2,7 @@
 import MainSearch from '../components/mainSearch.vue'
 import DetailPage from '../components/detailPage.vue'
 import SearchResults from '../components/searchResults.vue'
+import RecipeSearch from '../components/recipeSearch.vue'
 
 
 const routes = [
@@ -9,7 +10,7 @@ const routes = [
 		path: '/',
 		name: 'home',
 		components: {
-			home: MainSearch
+			home: RecipeSearch
 		}
 	},
 
@@ -17,8 +18,7 @@ const routes = [
 		path: '/search',
 		name: 'search-results',
 		components: {
-			home: MainSearch,
-			searchResults: SearchResults
+			searchResults: RecipeSearch
 		}
 	},
 

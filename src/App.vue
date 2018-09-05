@@ -13,8 +13,6 @@
 			<router-view name="details"></router-view>
 
 			<Footer />
-			
-			<RecipeSearch/>
 				
 		</div>
 	</div>
@@ -29,9 +27,6 @@
 	import Header from './components/header.vue'
 	import Navigation from './components/navigation.vue'
 	import Footer from './components/footer.vue'
-	
-	// Test
-	import RecipeSearch from './components/recipeSearch.vue'
 
 	export default {
 		name: 'app',
@@ -50,8 +45,7 @@
 		components: {
 			Header,
 			Navigation,
-			Footer,
-			RecipeSearch
+			Footer
 		}
 	}
 
