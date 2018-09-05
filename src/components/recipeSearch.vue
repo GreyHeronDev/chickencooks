@@ -21,7 +21,7 @@
 				</div>
 			</div>	
 		</div>
-		
+
 		<hits>
 			<SectionTitle v-bind:sectionTitle="sectionTitle" slot="section-title" />
 		</hits>
@@ -30,11 +30,16 @@
 </template>
 
 <script>
-
-	import Vue from 'vue'; // needed to tell JS which function to use
-	// import for innerSearch
-	import {SearchButton, Searchbox, Hits} from 'vue-innersearch/src/innerSearch';
+	
 	import SectionTitle from './sectionTitle.vue';
+	
+	// import for innerSearch
+	import Vue from 'vue'; // needed to tell JS which function to use
+
+	// customised innersearch components
+	import SearchButton from './SearchButton.vue';
+	import Searchbox from './Searchbox.vue';
+	import Hits from './Hits.vue';
 
 	export default {
 		name: 'RecipeSearch',
