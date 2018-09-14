@@ -29,7 +29,7 @@
                                 <div class="col-xs-12 col-md-6">
                                     <div class="recipe-summary-wrap">
                                         <h3 class="recipe-title">
-                                            <a href=""> {{item._source.name}} </a>
+                                            <router-link v-bind:to="{name: 'details', params: {dishDetails: item._source}, query: {recipe: item._source.name}}">  {{item._source.name}}</router-link>
                                         </h3>
                                         <div class="recipe-summary">
                                             {{ item._source.summary }}

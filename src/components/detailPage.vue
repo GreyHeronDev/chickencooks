@@ -16,14 +16,16 @@
 							<div class=" col-xs-6">
 								<h3 class="paragraph-title">Ingredients</h3>
 								<ul class="ingredient-list">
-									<li v-for="(item, index) in dishDetails.ingredients" v-bind:key="index"> 
-										{{ item }}
+									<li v-for="(ingredientListItem, index) in dishDetails.ingredients" v-bind:key="index"> 
+										<span class="ingredient-name"> {{ingredientListItem.ingredient}} </span>
+										<span class="ingredient-name"> {{ingredientListItem.quantity}} </span>
+										<span class="ingredient-name"> {{ingredientListItem.unit_measure}} </span>
 									</li> 
 								</ul>
 							</div>
 
 							<div class="col-xs-6">
-								<img class="recipe-image" v-bind:src="dishDetails.img" alt="" />
+								<img class="recipe-image" v-bind:src="dishDetails.image" alt="" />
 							</div>
 						</div>
 
@@ -60,17 +62,17 @@
 
 		data: function () {
 			return {
-				dishDetails: {}
+				dishDetails: this.$route.params.dishDetails
 			}
 		},
 
 		created: function() {
-			this.goToDetailPage(this.$route.params.itemID);
+			//this.goToDetailPage(this.$route.params.itemID);
 		},
 
 		watch: {
 			// call again the method if the route changes
-			'$route': 'goToDetailPage'
+			//'$route': 'goToDetailPage'
 		},
 
 		methods: {
