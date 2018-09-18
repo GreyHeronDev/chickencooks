@@ -19,7 +19,7 @@
 						</div>
 					</form>
 
-					<div class="add-new-recipe-wrap">
+					<div class="new-recipe-button-wrap">
 						<router-link v-bind:to="{name: 'add-new-recipe'}" class="add-new-link"> Add new recipe </router-link>
 					</div>
 				</div>

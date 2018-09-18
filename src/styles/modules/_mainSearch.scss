@@ -4,7 +4,7 @@
 	position: relative;
 	
 	.main-search-form {
-		padding: 50px 0 75px;
+		padding: 50px 0 50px;
 		text-align: center;
 		
 		.inputCont {
@@ -35,7 +35,6 @@
 					&::placeholder {
 						color: #fff;
 					}
-		
 				}
 
 				// vue-innerseaarch styles
@@ -59,15 +58,24 @@
 					font-weight: normal;
 				}
 			}
-			
-			
 		}
-	
 		
 		&.error {
 			border: 1px solid red;
 		}
 		
+	}
+
+	.new-recipe-button-wrap {
+		padding: 0 0 10px 0;
+
+		.add-new-link {
+			display: block;
+			margin: 0 50px;
+			text-align: center;
+			border-top: 1px solid;
+			padding: 20px 0 15px 0;
+		}
 	}
 	
 }

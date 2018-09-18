@@ -27,7 +27,7 @@
 			
 			a {
 				color: #fff;
-				display: inline-block;
+				display: block;
 				font-weight: normal;
 				text-transform: uppercase;
 				
@@ -39,7 +39,6 @@
 				&.navTitle {
 					padding: 20px 0;
 					position: relative;
-					/* z-index: 1000; */
 				}
 			}
 			
