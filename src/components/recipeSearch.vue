@@ -18,6 +18,10 @@
 						
 						</div>
 					</form>
+
+					<div class="add-new-recipe-wrap">
+						<router-link v-bind:to="{name: 'add-new-recipe'}" class="add-new-link"> Add new recipe </router-link>
+					</div>
 				</div>
 			</div>	
 		</div>
@@ -71,5 +75,7 @@
 
 <style lang="scss">
 
+	@import "~stylesPath/_mainSearch.scss";
+	@import "~stylesPath/_searchResults.scss";
 
 </style>

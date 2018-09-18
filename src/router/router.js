@@ -1,8 +1,9 @@
 
-import MainSearch from '../components/mainSearch.vue'
+// import MainSearch from '../components/mainSearch.vue'
 import DetailPage from '../components/detailPage.vue'
-import SearchResults from '../components/searchResults.vue'
+// import SearchResults from '../components/searchResults.vue'
 import RecipeSearch from '../components/recipeSearch.vue'
+import SubmitRecipe from '../components/submitRecipe.vue'
 
 
 const routes = [
@@ -10,7 +11,7 @@ const routes = [
 		path: '/',
 		name: 'home',
 		components: {
-			home: RecipeSearch
+			default: RecipeSearch
 		}
 	},
 
@@ -18,7 +19,7 @@ const routes = [
 		path: '/search',
 		name: 'search-results',
 		components: {
-			searchResults: RecipeSearch
+			default: RecipeSearch
 		}
 	},
 
@@ -27,9 +28,17 @@ const routes = [
 		name: "details",
 		append: "true",
 		components: {
-			details: DetailPage
-		},
-		props: true 
+			default: DetailPage
+		}
+	},
+
+	{ 
+		path: '/add', 
+		name: "add-new-recipe",
+		append: "true",
+		components: {
+			default: SubmitRecipe
+		}
 	}
 ]
 	

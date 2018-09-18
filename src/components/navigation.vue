@@ -9,16 +9,11 @@
 				
 				
 					<li class="col-sm-4 col-xs-12 topLevelLi" v-for="item in navItems" v-bind:key="item.id"> 
-						
-						<!-- <div class="hoverWrap">
-							<a href="#" class="navTitle">{{ item.text }}</a>
-						</div> -->
 
 						<div class="hoverWrap">
 							<router-link v-bind:to="{name: 'search-results', params: {searchcriteria: {type: item.text}}, query: {type: item.text}}" class="navTitle"> {{ item.text }} </router-link>
 						</div>
 
-						
 						
 					</li> 
 	

@@ -8,9 +8,7 @@
 			<Header />
 			<Navigation v-bind:navItems="navItems" />
 
-			<router-view name="home"></router-view>
-			<router-view name="searchResults"></router-view>
-			<router-view name="details"></router-view>
+			<router-view ></router-view>
 
 			<Footer />
 				
